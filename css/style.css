@@ -207,7 +207,7 @@ header{
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 30px;
+  width: 31px;
   height: 60px;
   border: 2px solid #fff;
   border-radius: 50px;
@@ -631,6 +631,7 @@ header{
 }
 .modal-content{
     width: 90%;
+    margin: auto;
 }
 .modal-header,
 .modal-body,
@@ -846,6 +847,15 @@ header{
     color: #ffed00;
 }
 @media (max-width: 1199px){
+    .modal-form{
+        border-top: 1px solid #a7a7a7;
+        padding-top: 20px;
+    }
+    .modal-form form{
+        text-align: center;
+    }
+}
+@media (max-width: 1199px){
     .menu-icon {
         display: block;
     }
@@ -1017,6 +1027,30 @@ header{
         bottom: 25px;
         z-index: 99;
     }
+    .modal{
+        margin: 0;
+    }
+    .modal-header .carousel-caption {
+        bottom: 18%;
+    }    
+    .modal-header .carousel-caption h5{
+        font-size: 16px;
+        font-family: "sansbold";
+        color: #ffffff;
+        text-align: left;
+        margin-bottom: 12px;
+    }
+    .modal-header .carousel-caption p{
+        font-size: 9px;
+        font-family: "Regular";
+        color: #6e6e6e;
+        text-align: left;
+    }
+    .carousel-control-next,
+    .carousel-control-prev{
+        display: none;
+    }
+    
 
     .modal-footer{
         padding: 40px 20px 70px;
