@@ -132,17 +132,22 @@ header{
     height: 100vh;
     display: flex;
     align-items: center;
-    /* padding-top: 45px; */
+}
+.main-slider .carousel{
+    width: 100%;
 }
 .main-slider .left-text{
     font-size: 60px;
     font-family: "ExtraBold";
     color: #fffeff;
+    width: 50%;
 }
 .text-image{
     display: flex;
     align-items: center;
     height: 80vh;
+    width: 100%;
+    justify-content: space-between;
 }
 
 /*to make dots image*/
@@ -154,6 +159,8 @@ header{
     white-space: nowrap;
     width: 100%;
     bottom: -20px;
+    display: flex;
+    justify-content: center;
 }
 .main-slider .carousel-indicators li {
     background-color: transparent;
@@ -163,6 +170,30 @@ header{
     height: auto;
     width: auto;
     opacity: 1;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    position: relative;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 130px;
+}
+.main-slider .carousel-indicators li::after{
+    content: "";
+    border: 1px solid #fff;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    width: 110px;
+    margin-left: 10px;
+}
+.main-slider .carousel-indicators li:last-of-type{
+    margin-right: 0;
+}
+.main-slider .carousel-indicators li:last-of-type::after{
+    display: none;
 }
 .main-slider .carousel-indicators li img {
     display: block;
@@ -321,7 +352,7 @@ header{
     color: #ffed00;
     line-height: 1.2;
     border: 1px solid #ffed00;
-    border-radius: 19px;
+    border-radius: 21px;
     background-color:transparent;
     width: 140px;
     height: 42px;
@@ -361,8 +392,7 @@ header{
     text-align: center;
     width: 100%;
     background-color: #171717;
-    box-shadow: 0px 0px 20px 0px rgba(1, 2, 2, 0.5);
-    padding: 57px 10px 68px;
+    padding: 57px 10px 45px;
     margin-bottom: 30px;
 }
 .box-container img{
@@ -373,16 +403,39 @@ header{
     height: 75px;
 }
 
-.box-container .adv-span{
+.box-container .our-span{
     color: #fffeff;
     font-size: 18px;
     font-family: "SemiBold";
     margin-bottom: 16px;
 }
-.box-container .adv-p{
+.box-container .our-p{
     color: #4c4c4c;
     font-size: 14px;
     font-family: "Regular";
+}
+.box-container .our-button{
+
+}
+.box-container .our-button{
+    color: #ffed00;
+    border: 1px solid #ffed00;
+    font-size: 14px;
+    font-family: "sanslight";
+    border-radius: 19px;
+    background-color: #141414;
+    width: 100%;
+    max-width: 128px;
+    height: 38px;
+    transition: all 0.3s ease-in-out;
+}
+.box-container .our-button:hover{
+    border:none;
+    color: #141414;
+    background-color: #ffed00;
+}
+.box-container.last-box{
+    padding-bottom: 28px;
 }
 
 /*                              box section                           */
@@ -426,6 +479,7 @@ header{
     font-size: 18px;
     font-family: "SemiBold";
     margin-top: 12px;
+    padding-bottom: 6px;
 }
 .even .work-text .work-span{
     display: flex;
@@ -532,7 +586,8 @@ header{
     background-color: #141414;
     width: 100%;
     max-width: 196px;
-    height: 59px;
+    height: 55px;
+    font-family: "sansbold";
     transition: all 0.3s ease-in-out;
 }
 .top-footer button:hover{
@@ -668,6 +723,7 @@ header{
     border: none;
     color: #141414;
 }
+.modal-header .carousel-indicators li.active,
 .modal-header .carousel-indicators li:hover{
     color: #ffed00;
     background-color: #141414;
@@ -832,7 +888,7 @@ header{
     max-width: 1170px;
     }
     .demo a {
-        top: -15px;
+        top: -30px;
     }
 }
 /*phone size menu*/
@@ -890,11 +946,11 @@ header{
     }
     .nav-title {
         font-size: 17px;
-        color: #fff;
+        color: #141414;
         font-family: "sansbold";
     }
     .nav-head .close-btn {
-        color: #fff;
+        color: #141414;
         font-size: 15px;
     }
     .big-menu {
@@ -990,8 +1046,12 @@ header{
     header {
         position: static;
     }
+    
+    .main-slider {
+        height: 80vh;
+    }
     .nav-header {
-        padding: 22px 0 20px;
+        padding: 20px 0 10px;
     }
     .nav-header figure{
         margin: 0;
@@ -1030,6 +1090,13 @@ header{
     .modal{
         margin: 0;
     }
+    .modal-content {
+        width: 80%;
+    }
+    .modal-header .carousel-indicators{
+        padding-top: 20px;
+        margin-left: 0;
+    }
     .modal-header .carousel-caption {
         bottom: 18%;
     }    
@@ -1041,7 +1108,7 @@ header{
         margin-bottom: 12px;
     }
     .modal-header .carousel-caption p{
-        font-size: 9px;
+        font-size: 5px;
         font-family: "Regular";
         color: #6e6e6e;
         text-align: left;
@@ -1059,8 +1126,9 @@ header{
         position: static;
     }
     .modal-header .carousel-indicators li {
-        width: 158px;
-        padding-left: 10px;
+        padding: 0px;
+        text-align: center;
+        margin: 0 auto 8px;
     }
     .main-slider .carousel-indicators {
         max-width: 100%;
@@ -1068,8 +1136,12 @@ header{
     .main-slider .carousel-indicators img{
         max-width: 100%;
     }
-    
-
+    .main-slider .carousel-indicators li{
+        margin-right: 30px;
+    }
+    .main-slider .carousel-indicators li::after{
+        display: none;
+    }     
 }
 /*phone size menu*/
 
